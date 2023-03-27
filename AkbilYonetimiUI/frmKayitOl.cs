@@ -57,7 +57,7 @@ namespace AkbilYonetimiUI
 
                 //2) Emaili daha önce kayıtlı değilse KAYIT OLACAK.
                 if (string.IsNullOrEmpty(txtIsim.Text) || string.IsNullOrEmpty(txtSoyisim.Text) || string.IsNullOrEmpty(txtEmail.Text) || string.IsNullOrEmpty(txtSifre.Text))
-                   // baglanti.ConnectionString = baglantiCumlesi;
+                // baglanti.ConnectionString = baglantiCumlesi;
                 {
                     MessageBox.Show("Bilgileri eksiksiz giriniz !", "UYARI", MessageBoxButtons.OK, MessageBoxIcon.Stop);
                     return;
@@ -70,6 +70,7 @@ namespace AkbilYonetimiUI
                 if (rowEffected > 0)
                 {
                     MessageBox.Show("KAYIT EKLENDİ !", "UYARI", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    GirisFormunaGit();
                 }
                 else
                 {
@@ -86,6 +87,22 @@ namespace AkbilYonetimiUI
             }
         }
 
-     
+        private void GirisFormunaGit()
+        {
+            frmGiris frmG = new frmGiris();
+            frmG.Email = txtEmail.Text.Trim();
+            this.Hide();
+            frmG.Show();
+        }
+
+        private void frmKayitOl_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            GirisFormunaGit();
+        }
+
+        private void btnGiris_Click(object sender, EventArgs e)
+        {
+            GirisFormunaGit();
+        }
     }
 }

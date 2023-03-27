@@ -91,6 +91,7 @@
             txtSifre.Name = "txtSifre";
             txtSifre.Size = new Size(100, 23);
             txtSifre.TabIndex = 2;
+            txtSifre.KeyPress += txtSifre_KeyPress;
             // 
             // txtEmail
             // 
@@ -130,6 +131,7 @@
             DoubleBuffered = true;
             Name = "frmGiris";
             Text = "HOŞ GELDİNİZ...";
+            Load += frmGiris_Load;
             grpBoxGiris.ResumeLayout(false);
             grpBoxGiris.PerformLayout();
             ResumeLayout(false);

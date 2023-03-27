@@ -70,8 +70,7 @@
             dtpDogumTarihi.Location = new Point(129, 176);
             dtpDogumTarihi.Name = "dtpDogumTarihi";
             dtpDogumTarihi.Size = new Size(212, 23);
-            dtpDogumTarihi.TabIndex = 51;
-
+            dtpDogumTarihi.TabIndex = 4;
             // 
             // btnGiris
             // 
@@ -79,16 +78,17 @@
             btnGiris.Location = new Point(58, 285);
             btnGiris.Name = "btnGiris";
             btnGiris.Size = new Size(291, 41);
-            btnGiris.TabIndex = 49;
+            btnGiris.TabIndex = 6;
             btnGiris.Text = "GİRİŞ YAP";
             btnGiris.UseVisualStyleBackColor = true;
+            btnGiris.Click += btnGiris_Click;
             // 
             // txtIsim
             // 
             txtIsim.Location = new Point(129, 22);
             txtIsim.Name = "txtIsim";
             txtIsim.Size = new Size(211, 23);
-            txtIsim.TabIndex = 48;
+            txtIsim.TabIndex = 0;
             // 
             // btnKayitOl
             // 
@@ -96,7 +96,7 @@
             btnKayitOl.Location = new Point(58, 223);
             btnKayitOl.Name = "btnKayitOl";
             btnKayitOl.Size = new Size(291, 41);
-            btnKayitOl.TabIndex = 50;
+            btnKayitOl.TabIndex = 5;
             btnKayitOl.Text = "KAYIT OL";
             btnKayitOl.UseVisualStyleBackColor = true;
             btnKayitOl.Click += btnKayitOl_Click;
@@ -116,7 +116,7 @@
             txtSifre.Location = new Point(129, 139);
             txtSifre.Name = "txtSifre";
             txtSifre.Size = new Size(211, 23);
-            txtSifre.TabIndex = 45;
+            txtSifre.TabIndex = 3;
             // 
             // label2
             // 
@@ -133,7 +133,7 @@
             txtEmail.Location = new Point(129, 101);
             txtEmail.Name = "txtEmail";
             txtEmail.Size = new Size(211, 23);
-            txtEmail.TabIndex = 46;
+            txtEmail.TabIndex = 2;
             // 
             // label3
             // 
@@ -150,7 +150,7 @@
             txtSoyisim.Location = new Point(129, 59);
             txtSoyisim.Name = "txtSoyisim";
             txtSoyisim.Size = new Size(211, 23);
-            txtSoyisim.TabIndex = 47;
+            txtSoyisim.TabIndex = 1;
             // 
             // label4
             // 
@@ -181,6 +181,7 @@
             Controls.Add(groupBox1);
             Name = "frmKayitOl";
             Text = "frmKayitOl";
+            FormClosed += frmKayitOl_FormClosed;
             Load += frmKayitOl_Load;
             groupBox1.ResumeLayout(false);
             groupBox1.PerformLayout();
